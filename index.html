@@ -24,11 +24,11 @@
 					<div class="formBox">
 						<label for="departure">Flying from</label>
 						<span class="icon"></span>
-						<input type="text" name="departure" id="departure" placeholder=" Departure city" />
+						<input type="text" name="departure" id="departure" placeholder=" Departure Country" />
 					</div>
 					<div class="formBox">
 						<label for="destination">Flying to</label>
-						<input type="text" name="destination" id="destination" placeholder=" Destination city" />
+						<input type="text" name="destination" id="destination" placeholder=" Destination Country" />
 					</div>
 
 					<div class="formBox_date">
@@ -92,11 +92,13 @@
 			range: true,
 			min: 100,
 			max: 5000,
-			values: [ 500, 2000 ],
+			values: [ 500, 2500 ],
 			slide: function( event, ui ) {
 				$("#amount").val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+				console.log(ui.values[1] +'%');
+				 $('#sliderDiv').css('width', 100 - ui.values[1]/4000 +'%');
 			}
-		});
+		}).append('<div id="sliderDiv" style="width: 50%"></div>');
 		$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 	});
 		
