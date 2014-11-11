@@ -382,7 +382,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	
 #departure
 {	
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/location.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -399,7 +399,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 #destination
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/location.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -436,7 +436,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	
 #num_adults
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/people.png');
     background-position: 10% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -503,7 +503,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	
 #departure
 {	
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/location.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -520,7 +520,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 #destination
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/location.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
