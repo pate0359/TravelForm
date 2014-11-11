@@ -77,23 +77,6 @@ h2{
 /*	background-color: yellow;*/
 	
 }
-.foot{
-
-	position: absolute;
-    height: 3em;
-    width:100%;
-    bottom:0px;
-	margin-left: 1%;
-/*
-	clear: both;
-	margin-left: 2%;
-*/
-/*	margin-top: 25%;*/
-/*	padding-top: 40%;*/
-/*	padding-bottom: 1%;*/
-	
-	
-}
 
 /*******************************************
 				Form Styles
@@ -333,6 +316,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	height:30px;
 	border-radius: 5px;
 }
+	
+	.foot{
+
+	position: absolute;
+    height: 3em;
+    width:100%;
+    bottom:0px;
+	margin-left: 1%;
+/*
+	clear: both;
+	margin-left: 2%;
+*/
+/*	margin-top: 25%;*/
+/*	padding-top: 40%;*/
+/*	padding-bottom: 1%;*/
+	
+	
+}
+
+	
 }
 @media screen and (min-width: 500px) and (max-width:779px) {
 	
@@ -446,6 +449,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	height:30px;
 	border-radius: 5px;
 }
+	
+	.foot{
+
+	position: absolute;
+    height: 3em;
+    width:100%;
+    bottom:0px;
+	margin-left: 1%;
+/*
+	clear: both;
+	margin-left: 2%;
+*/
+/*	margin-top: 25%;*/
+/*	padding-top: 40%;*/
+/*	padding-bottom: 1%;*/
+	
+	
+}
+
 }
 @media screen and (max-width: 500px) {
 	
@@ -493,6 +515,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	clear: both;
 }
 	
+/*
 .foot{
 	clear: both;
 	width: 100%;
@@ -500,6 +523,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	padding-top: 95%;
 	padding-bottom: 1%;
 }
+*/
 	
 #departure
 {	
@@ -567,6 +591,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	height:30px;
 	border-radius: 5px;
 }
+	
+	.foot{
+
+	position: absolute;
+    height: 20px;
+    width:100%;
+    bottom:0px;
+		margin-top: 10%;
+	margin-left: 1%;
+		float: left;
+	}
 }
 
 /*******************************************
