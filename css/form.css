@@ -74,6 +74,17 @@ h2{
 .masthead{
 	
 }
+header, h2
+{
+	font-family: 'Ubuntu', sans-serif;
+}
+p{
+	font-family: 'Ubuntu', sans-serif;
+}
+label
+{
+	font-family: 'Ubuntu', sans-serif;
+}
 .main{
 /*	background-color: yellow;*/
 	
@@ -154,6 +165,7 @@ label{
 option
 {
 	text-align: right;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 input[type=submit],
@@ -172,6 +184,17 @@ input[type=reset]{
 	outerGlowColor:#98cb00;
 */
 	
+}
+
+select
+{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+input[type=text]
+{
+font-family: 'Ubuntu', sans-serif;
+	font-size: 13px;
 }
 
 input[type=text]:focus,
@@ -244,6 +267,7 @@ input[type=slider]
 	background-color: transparent;
 	line-height:-20px;
 	padding-bottom: 1%;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 input[type=date]::-webkit-inner-spin-button {
