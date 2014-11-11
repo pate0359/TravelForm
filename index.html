@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Travel Form</title>
+	<link rel="stylesheet" href="css/form.css" />
+	 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="top">
+			<header class="masthead">
+				<h1>Hotel-O-City</h1>
+			</header>
+			<div class="main">
+			<section>
+				<h2>Book Cheap Flights</h2>
+				<p>At Hotel-O-City we make it easy for you to search and book flights to anywhere in the world.</p>
+				<form name="travelForm" id="travelForm" action="#" method="post" enctype="application/x-www-form-urlencoded">
+
+					<div class="formBox">
+						<label for="departure">Flying from</label>
+						<span class="icon"></span>
+						<input type="text" name="departure" id="departure" placeholder=" Departure city" />
+					</div>
+					<div class="formBox">
+						<label for="destination">Flying to</label>
+						<input type="text" name="destination" id="destination" placeholder=" Destination city" />
+					</div>
+
+					<div class="formBox_date">
+						<label for="departure_dt">Departing</label>
+						<input type="text" data-date-inline-picker="true" name="departure_dt" id="departure_dt" placeholder=" dd/mm/yyyy" />
+					</div>
+					<div class="formBox_date">
+						<label for="return_dt">Returning</label>
+						<input type="text" name="return_dt" id="return_dt" placeholder=" dd/mm/yyyy" />
+					</div>
+
+						<div class="col_adult">
+							<label for="num_adults">Adults(18+)</label>
+<!--							<input type="number" name="num_adults" id="num_adults" min="1" max="10" step="1" />-->
+							
+							<select name="num_adults" id="num_adults" dir="rtl">
+							</select>
+							
+						</div>
+						<div class="col_price">
+							<label id="price" for="price" title="Max. price per person">Price : </label>
+							<input type="slider" id="amount" align="top" readonly>
+	<!--						<div id="slider"></div>-->
+<!--							<input type="range" name="price" id="price" min="100" max="2000" value="1000"/>-->
+							<div id="slider-range"></div>
+						</div>
+
+					<div class="col_buttons">
+						<input class="button" type="reset" name="btnReset" id="btnReset" value="Reset" />
+						<input class="button" name="btnSubmit" id="btnSubmit" value="Submit" />
+					</div>
+				</form>
+			</section>
+				</div>
+		</div>
+		
+		<footer class="foot">
+				<p>&copy; 2014 Chicken Stuff Inc.</p>
+			</footer>
+	</div>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script src="js/jquery.select-to-autocomplete.js"></script>
+<!--	<link rel="stylesheet" href="/resources/demos/style.css">-->
+	<script>
+	$(function() {
+		
+		//Add date picker
+		$( "#departure_dt" ).datepicker();
+		$( "#return_dt" ).datepicker();
+		
+		// Add number slider value
+		for(var i=19; i< 80; i++)
+		{
+			$( "#num_adults").append('<option value="'+i+'">'+i+'</option>');
+		}
+	      		
+		// Add slider ranger
+		$( "#slider-range" ).slider({
+			range: true,
+			min: 100,
+			max: 5000,
+			values: [ 500, 2000 ],
+			slide: function( event, ui ) {
+				$("#amount").val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+		});
+		$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	});
+		
+		//Add country picker
+		var tags = ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas"," The","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Is.","Brunei","Bulgaria","Burkina Faso","Burma","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central African Rep.","Chad","Chile","China","Colombia","Comoros","Congo"," Dem. Rep.","Congo"," Repub. of the","Cook Islands","Costa Rica","Cote dIvoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","Gabon","Gambia"," The","Gaza Strip","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea"," North","Korea"," South","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia"," Fed. St.","Moldova","Monaco","Mongolia","Montserrat","Morocco","Mozambique","Namibia","Nauru","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","N. Mariana Islands","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Helena","Saint Kitts & Nevis","Saint Lucia","St Pierre & Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome & Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos Is","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Virgin Islands","Wallis and Futuna","West Bank","Western Sahara","Yemen","Zambia","Zimbabwe"];
+		
+$( "#departure" ).autocomplete({
+  source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});
+		
+		$( "#destination" ).autocomplete({
+  source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});		
+	</script>
+</body>
+</html>
