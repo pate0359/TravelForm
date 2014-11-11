@@ -298,7 +298,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 #departure_dt
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/Calendar.png');
     background-position: 3% 50%;
 	padding-left:15%;
     background-repeat: no-repeat;
@@ -310,7 +310,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 #return_dt
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/Calendar.png');
     background-position: 3% 50%;
 	padding-left:15%;
     background-repeat: no-repeat;
@@ -411,7 +411,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 #departure_dt
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/Calendar.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -423,7 +423,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 #return_dt
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/Calendar.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -532,7 +532,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 #departure_dt
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/Calendar.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -544,7 +544,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 #return_dt
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/Calendar.png');
     background-position: 2% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
@@ -557,7 +557,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	
 #num_adults
 {
-	background-image: url('../img/calendar.png');
+	background-image: url('../img/people.png');
     background-position: 10% 50%;
 	padding-left:10%;
     background-repeat: no-repeat;
